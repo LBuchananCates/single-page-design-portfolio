@@ -1,0 +1,80 @@
+:root {
+  --vibrant-purple: #755cde;
+  --summer-tangerine: #f6a560;
+  --mint-toothpaste: #61c4b7;
+  --peach-pink: #f39e9e;
+  --salmon-pink: #eb7565;
+  --maroon-purple: #552049;
+  --light-cream: #fff7f0;
+  --black: #030303;
+  --gray: #7a746e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: var(--light-cream);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+/* nav bar */
+nav {
+  display: flex;
+  margin: 16px;
+}
+
+.main-logo {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+/* hero */
+.hero {
+  margin: 16px;
+}
+
+.hero__title {
+  color: var(--black);
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.hero__content {
+  color: var(--gray);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px; /* 162.5% */
+  margin: 16px 29px 0;
+}
+
+/* solutions */
+.solutions {
+  margin: 16px;
+}
+
+/* designer */
+.designer {
+  margin: 100px 16px;
+}
+
+.booking {
+  margin: 100px 16px 0px;
+}
+
+footer {
+  margin: 40px 16px 32px;
+}
