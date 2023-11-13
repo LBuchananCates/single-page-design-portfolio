@@ -23,21 +23,31 @@ p {
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
   background-color: var(--light-cream);
-  display: grid;
+  display: flex;
+  flex-direction: column;
   place-items: center;
-  min-height: 100vh;
 }
 
-/* nav bar */
-nav {
+/* HEADER */
+header {
   display: flex;
   margin: 16px;
+  min-width: -webkit-fill-available;
+  justify-content: space-between;
 }
 
 .main-logo {
   width: 48px;
   height: 48px;
-  flex-shrink: 0;
+}
+
+.cta-btn {
+  background-color: var(--black);
+  color: white;
+  border-radius: 28px;
+  border: none;
+  width: 176px; /* what it looks like it should be 11rem */
+  height: 44px; /* 3rem */
 }
 
 /* hero */
@@ -48,33 +58,118 @@ nav {
 .hero__title {
   color: var(--black);
   text-align: center;
-  font-size: 36px;
+  font-size: 36px; /* 5.5rem */
   font-weight: 700;
 }
 
 .hero__content {
   color: var(--gray);
   text-align: center;
-  font-size: 16px;
+  font-size: 16px; /* .75rem; */
   font-weight: 500;
-  line-height: 26px; /* 162.5% */
+  line-height: 26px;
   margin: 16px 29px 0;
 }
 
 /* solutions */
 .solutions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-rows: NOT NEEDED unless abs necessary */
+  gap: 24px;
   margin: 16px;
+}
+
+.solutions__item {
+  color: white;
+  font-size: 24px;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.solutions__item:nth-child(1) {
+  background-color: var(--vibrant-purple);
+  grid-column: span 2; /* spans 2 columns*/
+}
+
+.solutions__item:nth-child(2) {
+  background-color: var(--summer-tangerine);
+}
+
+.solutions__item:nth-child(3) {
+  background-color: var(--peach-pink);
+}
+
+.solutions__item:nth-child(4) {
+  background-color: var(--salmon-pink);
+  grid-column: span 2; /* spans 2 columns*/
+}
+
+.solutions__item:nth-child(5) {
+  background-color: var(--mint-toothpaste);
+  grid-column: span 2; /* spans 2 columns*/
+}
+
+.solutions__item:nth-child(6) {
+  background-color: var(--maroon-purple);
+  grid-column: span 2; /* spans 2 columns*/
 }
 
 /* designer */
 .designer {
+  display: block;
+  text-align: center;
   margin: 100px 16px;
 }
 
-.booking {
-  margin: 100px 16px 0px;
+.designer__avatar {
+  background-color: var(--mint-toothpaste);
+  border-radius: 50%;
 }
 
+.designer__title {
+  margin: 40px 0px 24px;
+}
+
+.designer__content {
+  color: var(--gray);
+  margin: 24px 0px;
+}
+
+/* booking */
+.booking {
+  background: black;
+  color: white;
+  border-radius: 28px;
+  text-align: center;
+  padding: 48px 24px;
+  margin: 100px 16px 0px;
+  gap: 24px;
+}
+
+.booking__title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.booking__content {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+}
+
+.cta-btn--accent {
+  background-color: var(--salmon-pink);
+  margin: 24px 60px;
+}
+
+/* footer */
 footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: -webkit-fill-available;
   margin: 40px 16px 32px;
 }
