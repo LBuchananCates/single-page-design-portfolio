@@ -148,13 +148,11 @@ header {
 }
 
 .booking__title {
-  text-align: center;
   font-size: 26px;
   font-weight: 700;
 }
 
 .booking__content {
-  text-align: center;
   font-size: 16px;
   font-weight: 500;
   line-height: 26px;
