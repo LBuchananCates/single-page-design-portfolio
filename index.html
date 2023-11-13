@@ -4,72 +4,125 @@
   href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&display=swap"
   rel="stylesheet"
 />
+
 <body>
   <header>
-    <nav>
-      <img
-        src="./icons/main-logo.svg"
-        alt="black circle logo"
-        class="main-logo"
-      />
-      <button>Free Consultation</button>
-    </nav>
+    <img
+      src="./icons/main-logo.svg"
+      alt="black circle logo"
+      class="main-logo"
+    />
+    <button class="cta-btn">Free Consultation</button>
   </header>
 
   <main>
-    <div class="hero">
+    <section class="hero">
       <h1 class="hero__title">Design Solutions Made Easy</h1>
       <p class="hero__content">
         With over ten years of experience in various design disciplines, I’m
         your one-stop shop for your design needs.
       </p>
-    </div>
+    </section>
 
-    <div class="solutions">
-      <div class="graphic-design-solution">Graphic Design</div>
-      <div class="ui/ux-solution">UI/UX</div>
-      <div class="apps-solution">Apps</div>
-      <div class="illustrations-solution">Illustrations</div>
-      <div class="photography-solution">Photography</div>
-      <div class="motion-graphics-solution">Motion Graphics</div>
-    </div>
+    <section class="solutions">
+      <div class="solutions__item">
+        <img src="./icons/graphic-design-shapes.svg" alt="" />
+        <p>Graphic Design</p>
+      </div>
 
-    <div class="designer">
-      <img src="./images/amy-avatar.png" alt="amy avatar" class="amy-avatar" />
-      <h2>I’m Amy, and I’d love to work on your next project</h2>
-      <p>
+      <div class="solutions__item">
+        <img src="./icons/uiux-shapes.svg" alt="" />
+        <p>UI/UX</p>
+      </div>
+
+      <div class="solutions__item">
+        <img src="./icons/apps-shapes.svg" alt="" />
+        <p>UI/UX</p>
+      </div>
+
+      <div class="solutions__item">
+        <img src="./icons/illustration-shapes.svg" alt="" />
+        <p>Illustrations</p>
+      </div>
+
+      <div class="solutions__item">
+        <img src="./icons/photography-shapes.svg" alt="" />
+        <p>Photography</p>
+      </div>
+
+      <div class="solutions__item">
+        <img src="./icons/motion-graphics-shapes.svg" alt="" />
+        <p>Motion Graphics</p>
+      </div>
+    </section>
+
+    <section class="designer">
+      <img
+        src="./images/amy-avatar.png"
+        alt="amy avatar"
+        class="designer__avatar"
+      />
+      <h2 class="designer__title">
+        I’m Amy, and I’d love to work on your next project
+      </h2>
+      <p class="designer__content">
         I love working with others to create beautiful design solutions. I’ve
         designed everything from brand illustrations to complete mobile apps.
         I’m also handy with a camera!
       </p>
-      <button>Free Consultation</button>
-    </div>
+      <button class="cta-button cta-button--accent">Free Consultation</button>
+    </section>
 
-    <div class="portfolio">
-      <h2>My Work</h2>
-      <div class="projects">
-        <img src="./images/amy-project-1.png" alt="" />
-        <img src="./images/amy-project-2.png" alt="" />
-        <img src="./images/amy-project-3.png" alt="" />
-        <img src="./images/amy-project-4.png" alt="" />
-        <img src="./images/amy-project-5.png" alt="" />
+    <section class="portfolio">
+      <h2 class="portfolio__title">My Work</h2>
+      <div class="portfolio__content">
+        <img
+          class="projects__img"
+          src="./images/amy-project-1.png"
+          alt="purple shapes"
+        />
+        <img
+          class="projects__img"
+          src="./images/amy-project-2.png"
+          alt="icy blue waffle shape"
+        />
+        <img
+          class="projects__img"
+          src="./images/amy-project-3.png"
+          alt="hand holding newspaper"
+        />
+        <img
+          class="projects__img"
+          src="./images/amy-project-4.png"
+          alt="black graphic design book"
+        />
+        <img
+          class="projects__img"
+          src="./images/amy-project-5.png"
+          alt="hand holding smartphone"
+        />
       </div>
-      <img src="./icons/arrows.svg" alt="black left and right arrows" />
-    </div>
+      <button class="arrow-btn">
+        <img src="./icons/left-arrow.svg" alt="left arrow" />
+      </button>
+      <button class="arrow-btn">
+        <img src="./icons/right-arrow.svg" alt="right arrow" />
+      </button>
+    </section>
 
-    <div class="booking">
-      <h2>Book a call with me</h2>
-      <p>
+    <section class="booking">
+      <h2 class="booking__title">Book a call with me</h2>
+      <p class="booking__content">
         I’d love to have a chat to see how I can help you. The best first step
         is for us to discuss your project during a free consultation. Then we
         can move forward from there.
       </p>
-      <button>Free Consultation</button>
-    </div>
+      <button class="cta-button cta-button--accent">Free Consultation</button>
+    </section>
   </main>
 
   <footer>
     <img src="./icons/main-logo.svg" alt="black circle logo" />
-    <button>Free Consultation</button>
+    <button class="cta-button">Free Consultation</button>
   </footer>
 </body>
