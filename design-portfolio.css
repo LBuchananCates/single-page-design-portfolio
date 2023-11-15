@@ -31,44 +31,52 @@ body {
 /* HEADER */
 header {
   display: flex;
-  margin: 16px;
+  margin: 30px;
   min-width: -webkit-fill-available;
   justify-content: space-between;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
 .main-logo {
-  width: 48px;
-  height: 48px;
+  height: 8rem;
 }
 
 .cta-btn {
   background-color: var(--black);
   color: white;
-  border-radius: 28px;
+  font-size: 2.5rem;
+  border-radius: 60px;
   border: none;
-  width: 176px; /* what it looks like it should be 11rem */
-  height: 44px; /* 3rem */
+  width: 30rem;
+  height: 7.5rem;
 }
 
 /* hero */
 .hero {
   margin: 16px;
+  gap: 16px;
 }
 
 .hero__title {
   color: var(--black);
   text-align: center;
-  font-size: 36px; /* 5.5rem */
+  font-size: 5.5rem;
   font-weight: 700;
+  margin: 70px 0 0;
 }
 
 .hero__content {
   color: var(--gray);
   text-align: center;
-  font-size: 16px; /* .75rem; */
-  font-weight: 500;
-  line-height: 26px;
-  margin: 16px 29px 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 4.5rem;
+  margin: 40px 110px 0;
 }
 
 /* solutions */
@@ -76,43 +84,95 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   /* grid-template-rows: NOT NEEDED unless abs necessary */
-  gap: 24px;
-  margin: 16px;
+  gap: 40px;
+  margin: 0 30px;
 }
 
 .solutions__item {
   color: white;
-  font-size: 24px;
-  border-radius: 8px;
-  padding: 24px;
+  /* font-size: 2.5rem; relative ems*/
+  font-size: 28px;
+  font-weight: 500;
+  border-radius: 20px;
+  padding: 55px;
+  position: relative;
+}
+
+.solutions__item p {
+  font-size: 4rem;
+  position: absolute;
+  bottom: 50px;
 }
 
 .solutions__item:nth-child(1) {
   background-color: var(--vibrant-purple);
   grid-column: span 2; /* spans 2 columns*/
+  /* height: 30rem; fucks up the font-size */
+  grid-row: span 21;
+}
+
+.solutions__item:nth-child(1) img {
+  height: 25rem;
+  position: absolute;
+  right: 4rem;
 }
 
 .solutions__item:nth-child(2) {
   background-color: var(--summer-tangerine);
+  grid-row: span 12;
+}
+
+.solutions__item:nth-child(2) img {
+  height: 10rem;
+  position: absolute;
+  right: 4rem;
 }
 
 .solutions__item:nth-child(3) {
   background-color: var(--peach-pink);
+  grid-row: span 12;
+}
+
+.solutions__item:nth-child(3) img {
+  height: 10rem;
+  position: absolute;
+  right: 4rem;
 }
 
 .solutions__item:nth-child(4) {
   background-color: var(--salmon-pink);
   grid-column: span 2; /* spans 2 columns*/
+  grid-row: span 12;
+}
+
+.solutions__item:nth-child(4) img {
+  height: 10rem;
+  position: absolute;
+  right: 4rem;
 }
 
 .solutions__item:nth-child(5) {
   background-color: var(--mint-toothpaste);
   grid-column: span 2; /* spans 2 columns*/
+  grid-row: span 12;
+}
+
+.solutions__item:nth-child(5) img {
+  height: 10rem;
+  position: absolute;
+  right: 4rem;
 }
 
 .solutions__item:nth-child(6) {
   background-color: var(--maroon-purple);
   grid-column: span 2; /* spans 2 columns*/
+  grid-row: span 12;
+}
+
+.solutions__item:nth-child(6) img {
+  height: 10rem;
+  position: absolute;
+  right: 4rem;
 }
 
 /* designer */
@@ -123,44 +183,71 @@ header {
 }
 
 .designer__avatar {
-  background-color: var(--mint-toothpaste);
-  border-radius: 50%;
+  height: 49rem;
 }
 
 .designer__title {
+  font-size: 3.75rem;
+  font-weight: 600;
   margin: 40px 0px 24px;
 }
 
 .designer__content {
   color: var(--gray);
-  margin: 24px 0px;
+  font-size: 0.9rem;
+  line-height: 4.5rem;
+  margin: 50px 15px;
+}
+
+/* portfolio */
+.portfolio {
+  text-align: center;
+}
+
+.portfolio__title {
+  font-size: 2rem;
+}
+
+.portfolio__content img {
+  border-radius: 20px;
+}
+
+.portfolio button {
+  background-color: var(--light-cream);
+  border: none;
 }
 
 /* booking */
 .booking {
   background: black;
   color: white;
-  border-radius: 28px;
+  border-radius: 20px;
   text-align: center;
   padding: 48px 24px;
-  margin: 100px 16px 0px;
+  margin: 100px 24px 0px;
   gap: 24px;
 }
 
 .booking__title {
-  font-size: 26px;
-  font-weight: 700;
+  font-size: 4rem;
+  font-weight: 500;
 }
 
 .booking__content {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 26px;
+  font-size: 0.8rem;
+  font-weight: 300;
+  line-height: 4rem;
+  margin: 60px 40px;
 }
 
 .cta-btn--accent {
   background-color: var(--salmon-pink);
   margin: 24px 60px;
+  font-size: 2.5rem;
+  border-radius: 60px;
+  border: none;
+  width: 30rem;
+  height: 7.5rem;
 }
 
 /* footer */
@@ -169,5 +256,22 @@ footer {
   justify-content: space-between;
   align-items: center;
   min-width: -webkit-fill-available;
-  margin: 40px 16px 32px;
+  margin: 100px 20px 50px;
+}
+
+@media screen and (min-width: 426px), (max-width: 768px) {
+  .cta-btn:hover {
+    background-color: var(--vibrant-purple);
+  }
+
+  .cta-btn--accent:hover {
+    background-color: var(--summer-tangerine);
+  }
+  /* .solutions {
+    grid-template-columns: repeat(4, 1fr);
+  } */
+
+  /* .designer {
+    display: flex;
+  } */
 }
