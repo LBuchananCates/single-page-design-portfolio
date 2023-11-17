@@ -31,151 +31,164 @@ body {
 /* HEADER */
 header {
   display: flex;
-  margin: 30px;
+  margin: 8px 8px 0;
   min-width: -webkit-fill-available;
   justify-content: space-between;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  gap: 100px;
-}
-
 .main-logo {
-  height: 8rem;
+  height: 48px;
 }
 
 .cta-btn {
   background-color: var(--black);
   color: white;
-  font-size: 2.5rem;
-  border-radius: 60px;
+  border-radius: 28px;
   border: none;
-  width: 30rem;
-  height: 7.5rem;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 28px;
+  width: 176px;
+  height: 44px;
 }
 
-/* hero */
+/* main */
+main {
+  display: flex;
+  flex-direction: column;
+}
+
 .hero {
-  margin: 16px;
+  display: flex;
+  flex-direction: column;
+  margin: 32px 16px;
   gap: 16px;
 }
 
 .hero__title {
-  color: var(--black);
+  color: var(--Black, #030303);
   text-align: center;
-  font-size: 5.5rem;
+  font-size: 36px;
   font-weight: 700;
-  margin: 70px 0 0;
 }
 
 .hero__content {
   color: var(--gray);
   text-align: center;
-  font-size: 0.9rem;
-  font-weight: 400;
-  line-height: 4.5rem;
-  margin: 40px 110px 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  margin: 0 29px;
 }
 
-/* solutions */
 .solutions {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /* grid-template-rows: NOT NEEDED unless abs necessary */
-  gap: 40px;
-  margin: 0 30px;
+  gap: 24px;
+  margin: 0 8px;
 }
 
 .solutions__item {
   color: white;
-  /* font-size: 2.5rem; relative ems*/
   font-size: 28px;
   font-weight: 500;
-  border-radius: 20px;
+  border-radius: 8px;
   padding: 55px;
   position: relative;
 }
 
 .solutions__item p {
-  font-size: 4rem;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
   position: absolute;
-  bottom: 50px;
+  bottom: 24px;
+  left: 24px;
 }
 
 .solutions__item:nth-child(1) {
   background-color: var(--vibrant-purple);
-  grid-column: span 2; /* spans 2 columns*/
-  /* height: 30rem; fucks up the font-size */
-  grid-row: span 21;
+  grid-column: span 2;
+  grid-row: span 18;
 }
 
 .solutions__item:nth-child(1) img {
-  height: 25rem;
+  width: 128px;
+  height: 192px;
   position: absolute;
-  right: 4rem;
+  right: 24px;
+  top: 24px;
 }
 
 .solutions__item:nth-child(2) {
   background-color: var(--summer-tangerine);
-  grid-row: span 12;
+  grid-row: span 9;
 }
 
 .solutions__item:nth-child(2) img {
-  height: 10rem;
+  height: 64px;
   position: absolute;
-  right: 4rem;
+  right: 24px;
+  top: 24px;
 }
 
 .solutions__item:nth-child(3) {
   background-color: var(--peach-pink);
-  grid-row: span 12;
+  grid-row: span 9;
 }
 
 .solutions__item:nth-child(3) img {
-  height: 10rem;
+  height: 64px;
   position: absolute;
-  right: 4rem;
+  right: 24px;
+  top: 24px;
 }
 
 .solutions__item:nth-child(4) {
   background-color: var(--salmon-pink);
-  grid-column: span 2; /* spans 2 columns*/
-  grid-row: span 12;
+  grid-column: span 2;
+  grid-row: span 8;
 }
 
 .solutions__item:nth-child(4) img {
-  height: 10rem;
   position: absolute;
-  right: 4rem;
+  width: 128px;
+  height: 64px;
+  flex-shrink: 0;
+  right: 24px;
+  top: 24px;
 }
 
 .solutions__item:nth-child(5) {
   background-color: var(--mint-toothpaste);
-  grid-column: span 2; /* spans 2 columns*/
-  grid-row: span 12;
+  grid-column: span 2;
+  grid-row: span 8;
 }
 
 .solutions__item:nth-child(5) img {
-  height: 10rem;
+  width: 160px;
+  height: 64px;
+  flex-shrink: 0;
   position: absolute;
-  right: 4rem;
+  right: 24px;
+  top: 24px;
 }
 
 .solutions__item:nth-child(6) {
   background-color: var(--maroon-purple);
-  grid-column: span 2; /* spans 2 columns*/
-  grid-row: span 12;
+  grid-column: span 2;
+  grid-row: span 8;
 }
 
 .solutions__item:nth-child(6) img {
-  height: 10rem;
+  width: 160px;
+  height: 64px;
+  flex-shrink: 0;
   position: absolute;
-  right: 4rem;
+  right: 24px;
+  top: 24px;
 }
 
-/* designer */
 .designer {
   display: block;
   text-align: center;
@@ -183,33 +196,37 @@ main {
 }
 
 .designer__avatar {
-  height: 49rem;
+  height: 300px;
 }
 
 .designer__title {
-  font-size: 3.75rem;
-  font-weight: 600;
-  margin: 40px 0px 24px;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  margin: 40px 0px 0px;
 }
 
 .designer__content {
   color: var(--gray);
-  font-size: 0.9rem;
-  line-height: 4.5rem;
-  margin: 50px 15px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  margin: 24px 0;
 }
 
-/* portfolio */
 .portfolio {
   text-align: center;
 }
 
-.portfolio__title {
-  font-size: 2rem;
+.portfolio__content {
+  position: relative;
+  margin: 0 auto;
+  background-color: green;
+  height: 100%;
 }
 
-.portfolio__content img {
-  border-radius: 20px;
+.arrows {
+  height: 64px;
 }
 
 .portfolio button {
@@ -217,61 +234,45 @@ main {
   border: none;
 }
 
-/* booking */
+.cta-btn--accent {
+  background-color: var(--salmon-pink);
+  border-radius: 28px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 28px;
+  width: 176px;
+  height: 44px;
+}
+
 .booking {
-  background: black;
+  background-color: black;
   color: white;
-  border-radius: 20px;
-  text-align: center;
-  padding: 48px 24px;
-  margin: 100px 24px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
   gap: 24px;
+  width: 343px;
+  height: 352px;
+  flex-shrink: 0;
+  margin: 100px 0 40px;
+  font-weight: 500;
+  line-height: 26px;
 }
 
 .booking__title {
-  font-size: 4rem;
-  font-weight: 500;
+  margin: 49px 51px 0;
 }
 
 .booking__content {
-  font-size: 0.8rem;
-  font-weight: 300;
-  line-height: 4rem;
-  margin: 60px 40px;
+  text-align: center;
+  margin: 0 24px;
 }
 
-.cta-btn--accent {
-  background-color: var(--salmon-pink);
-  margin: 24px 60px;
-  font-size: 2.5rem;
-  border-radius: 60px;
-  border: none;
-  width: 30rem;
-  height: 7.5rem;
-}
-
-/* footer */
 footer {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin: 8px 8px 0;
   min-width: -webkit-fill-available;
-  margin: 100px 20px 50px;
-}
-
-@media screen and (min-width: 426px), (max-width: 768px) {
-  .cta-btn:hover {
-    background-color: var(--vibrant-purple);
-  }
-
-  .cta-btn--accent:hover {
-    background-color: var(--summer-tangerine);
-  }
-  /* .solutions {
-    grid-template-columns: repeat(4, 1fr);
-  } */
-
-  /* .designer {
-    display: flex;
-  } */
+  justify-content: space-between;
 }
