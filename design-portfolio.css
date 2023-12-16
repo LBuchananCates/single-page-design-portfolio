@@ -298,15 +298,16 @@ main {
   border-radius: 8px;
   gap: 24px;
   width: 100%;
-  height: 352px;
+  height: fit-content;
   margin: 100px 0 40px;
   font-weight: 500;
   line-height: 26px;
   text-align: center;
+  padding: 48px 51px;
 }
 
 .booking__title {
-  margin: 49px 51px 0;
+  /* margin: 49px 51px 0; */
 }
 
 .booking__content {
@@ -323,7 +324,7 @@ footer {
 
 /* tablet size */
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) {
   .cta-btn:hover {
     background-color: var(--vibrant-purple);
   }
@@ -347,11 +348,55 @@ footer {
   .solutions__item:nth-child(3) {
     grid-row: span 8;
   }
+
+  .designer {
+    display: flex;
+  }
+
+  .designer__avatar {
+    position: relative;
+    width: 364px;
+    height: 364px;
+    left: -40px;
+  }
+
+  .designer__title {
+    font-size: 32px;
+    margin: 0;
+  }
+
+  .designer__content {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .designer__text {
+    text-align: start;
+    width: 339px;
+    margin-left: 69px;
+    /* margin: 0 40px 120px 69px; overflows document */
+  }
+
+  .booking {
+    padding: 56px 75px 64px;
+  }
+
+  .booking__title {
+    margin: 0;
+  }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1440px) {
+  .hero__title {
+    font-size: 56px;
+  }
   .solutions {
     grid-template-columns: repeat(6, 1fr);
+  }
+
+  .solutions__item:nth-child(1) {
+    max-width: 354px;
+    max-height: 364px;
   }
 
   .solutions__item:nth-child(2) {
@@ -362,5 +407,22 @@ footer {
   .solutions__item:nth-child(3) {
     width: 164px;
     height: 182px;
+  }
+
+  .solutions__item:nth-child(4) {
+    order: 3;
+    width: 354px;
+    height: 158px;
+  }
+
+  .solutions__item:nth-child(5) {
+    width: 354px;
+    height: 182px;
+  }
+
+  .solutions__item:nth-child(6) {
+    order: 4;
+    width: 354px;
+    height: 158px;
   }
 }
