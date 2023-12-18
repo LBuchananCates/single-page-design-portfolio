@@ -306,10 +306,6 @@ main {
   padding: 48px 51px;
 }
 
-.booking__title {
-  /* margin: 49px 51px 0; */
-}
-
 .booking__content {
   text-align: center;
   margin: 0 24px;
@@ -392,6 +388,8 @@ footer {
   }
   .solutions {
     grid-template-columns: repeat(6, 1fr);
+    max-width: 1111px;
+    align-self: center;
   }
 
   .solutions__item:nth-child(1) {
@@ -424,5 +422,13 @@ footer {
     order: 4;
     width: 354px;
     height: 158px;
+  }
+
+  .designer {
+    align-self: center;
+  }
+
+  .carousel {
+    width: 100%;
   }
 }
