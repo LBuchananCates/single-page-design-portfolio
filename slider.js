@@ -2,7 +2,9 @@ const track = document.querySelector(".carousel__track");
 const slides = Array.from(track.children);
 const leftButton = document.querySelector(".carousel__button--left");
 const rightButton = document.querySelector(".carousel__button--right");
-const slideWidth = slides[0].getBoundingClientRect().width;
+const slideWidth = slides[0].getBoundingClientRect().width / 2;
+
+console.log(slideWidth);
 
 // arrange slides next to each other
 const setSlidePosition = (slide, index) => {

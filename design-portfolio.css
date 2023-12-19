@@ -222,7 +222,6 @@ main {
 /* carousel */
 .carousel {
   position: relative;
-  /* width: 80%; */
   width: 75%;
   height: 180px;
   margin: 0 auto;
@@ -373,6 +372,14 @@ footer {
     /* margin: 0 40px 120px 69px; overflows document */
   }
 
+  .portfolio {
+    margin: 110px 0 0;
+  }
+
+  .carousel {
+    height: 360px;
+  }
+
   .booking {
     padding: 56px 75px 64px;
   }
@@ -382,7 +389,7 @@ footer {
   }
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1440px) {
+@media screen and (min-width: 1025px) {
   .hero__title {
     font-size: 56px;
   }
@@ -426,9 +433,53 @@ footer {
 
   .designer {
     align-self: center;
+    align-items: center;
+  }
+
+  .designer__avatar {
+    width: 445px;
+    height: 445px;
+    left: 0;
+  }
+
+  .designer__title {
+    font-size: 40px;
+  }
+
+  .designer__text {
+    min-width: 540px;
   }
 
   .carousel {
     width: 100%;
+    height: 360px;
+  }
+
+  /* .carousel__track {
+    display: inline-flex;
+  } */
+
+  .carousel__image {
+    width: 540px;
+  }
+
+  /* .carousel__slide:nth-child(2) {
+    left: 1110px;
+  } */
+
+  /* .carousel__slide:nth-child(3) {
+    left: 1680px;
+  } */
+
+  /* .carousel__slide:nth-child(4) {
+    left: 2250px;
+  } */
+
+  /* .carousel__slide:nth-child(5) {
+    left: 350px;
+  } */
+
+  .booking {
+    max-width: 1111px;
   }
 }
