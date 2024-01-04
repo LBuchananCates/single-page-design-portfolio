@@ -455,29 +455,9 @@ footer {
     height: 360px;
   }
 
-  /* .carousel__track {
-    display: inline-flex;
-  } */
-
   .carousel__image {
     width: 540px;
   }
-
-  /* .carousel__slide:nth-child(2) {
-    left: 1110px;
-  } */
-
-  /* .carousel__slide:nth-child(3) {
-    left: 1680px;
-  } */
-
-  /* .carousel__slide:nth-child(4) {
-    left: 2250px;
-  } */
-
-  /* .carousel__slide:nth-child(5) {
-    left: 350px;
-  } */
 
   .booking {
     max-width: 1111px;
