@@ -35,7 +35,7 @@ body {
 header {
   display: flex;
   margin: 8px 8px 0;
-  min-width: -webkit-fill-available;
+  min-width: 90vw;
   justify-content: space-between;
 }
 
@@ -295,13 +295,12 @@ main {
 
 .booking__content {
   text-align: center;
-  margin: 0 24px;
 }
 
 footer {
   display: flex;
   margin: 8px 8px 0;
-  min-width: -webkit-fill-available;
+  min-width: 90vw;
   justify-content: space-between;
 }
 
@@ -366,6 +365,16 @@ footer {
 
   .portfolio {
     margin: 110px 0 0;
+    overflow: hidden;
+  }
+
+  .carousel {
+    height: 360px;
+  }
+
+  .carousel__container img {
+    height: 360px;
+    width: 540px;
   }
 
   .booking {
@@ -443,6 +452,6 @@ footer {
   }
 
   .booking {
-    max-width: 1111px;
+    max-width: 1095px;
   }
 }
