@@ -36,62 +36,58 @@ In order:
 
 1. Have been working on how to neatly style elements that I want to be centered in the middle of the page (especially on desktop view) using min-height and grid.
 2. Using CSS grid instead of flex for multiple viewports
-3.
+3. Logic required to restart photo slider from first photo and last photo
+
+Proud of my use of CSS grid. Was very fun to use for layout of the hero section; also learned how to use gap for easier spacing, rather than depending on margin and padding as seen in `.portfolio`.
 
 ```css
-body {
+.solutions {
   display: grid;
-  place-items: center;
-  min-height: 100vh;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin: 0 8px;
 }
 
-.share-button-unclicked {
-  width: 4rem;
-  height: 4rem;
-  position: absolute;
-  right: 90px;
-  cursor: pointer;
-  /* to prevent blue highlight when clicked */
-  -webkit-tap-highlight-color: transparent;
+.solutions__item:nth-child(1) {
+  background-color: var(--vibrant-purple);
+  grid-column: span 2;
+  grid-row: span 18;
 }
 
-.triangle {
-  position: absolute;
+.portfolio {
   display: flex;
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  border-width: 30px 30px 0 30px;
-  border-color: hsl(217, 19%, 35%) transparent transparent transparent;
-  transform: rotate(0deg);
-  bottom: -25px;
+  flex-direction: column;
+  gap: 32px;
+  text-align: center;
 }
 ```
 
-Proud of this javascript function that toggles display when clicking the share button; also created an event listener so that when user clicks anywhere outside of the share options dialog box, it hides. Not required in the instructions for building, but thought it would be nice to have 😊
+Proud of this javascript function that restarts the photo slider from the beginning upon reaching final slide using right arrow button, and vice versa for the left arrow button 😊 This was my biggest challenge for this project. I had to recode it twice before finding an easier way to make the slider slide.
 
 ```js
-function showShareOptions() {
-  var x = document.getElementById("share-options");
-  if (x.style.display === "flex") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "flex";
-  }
-}
+let curSlide = 0;
+let maxSlide = carouselImages.length - 1;
+let minSlide = carouselImages.length - carouselImages.length;
+const leftArrow = document.querySelector(".carousel__button--left");
+const rightArrow = document.querySelector(".carousel__button--right");
 
-document.addEventListener("click", function clickOutside(event) {
-  let shareButton = document.getElementById("share-button");
-  const socialMediaOptions = document.getElementById("share-options");
-  if (!shareButton.contains(event.target)) {
-    socialMediaOptions.style.display = "none";
+// left arrow
+leftArrow.addEventListener("click", function () {
+  if (curSlide === minSlide) {
+    curSlide = maxSlide;
+  } else {
+    curSlide--;
   }
+  carouselImages.forEach((img, idx) => {
+    let gap = idx * 5;
+    img.style.transform = `translateX(${100 * (idx - curSlide) + gap}%)`;
+  });
 });
 ```
 
 ### Continued development
 
-Still need to work on javascript skills, learned a lot more about CSS tricks (the triangle styling was very new to me); finally cleared up my confusion about exactly how to use positions relative vs. absolute (always good to have a refresher!)
+Still need to work on javascript skills, learned a lot more about CSS grid and have come to enjoy using it
 
 ### Useful resources
 
@@ -103,5 +99,5 @@ Still need to work on javascript skills, learned a lot more about CSS tricks (th
 
 ## Author
 
-- Website - [view it here!](https://whimsical-medovik-9c7c0a.netlify.app)
+- Website - [view it here!](https://verdant-tanuki-988258.netlify.app)
 - Frontend Mentor - [@LBuchananCates](https://www.frontendmentor.io/profile/lbuchanancates)
