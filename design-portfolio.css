@@ -247,6 +247,7 @@ main {
   top: 0;
   left: -16px;
   overflow: hidden;
+  /* scroll-snap-type: x mandatory; needed*/
 }
 
 .carousel__container img {
@@ -254,7 +255,7 @@ main {
   height: auto;
   width: 270px;
   border-radius: 10px;
-  transition: all 0.4s ease;
+  transition: all 0.4s cubic-bezier(0.43, 0.45, 0.45, 0.45);
 }
 
 .carousel__arrow {
@@ -292,6 +293,13 @@ main {
   line-height: 26px;
   text-align: center;
   padding: 48px 51px;
+}
+
+/* added for desktop change in display direction */
+.booking__div {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .booking__content {
@@ -380,6 +388,8 @@ footer {
 
   .booking {
     padding: 56px 75px 64px;
+    width: 90vw;
+    align-self: center;
   }
 
   .booking__title {
@@ -392,9 +402,14 @@ footer {
     padding: 0 165px;
   }
 
+  header {
+    min-width: 1111px;
+  }
+
   .hero__title {
     font-size: 56px;
   }
+
   .solutions {
     grid-template-columns: repeat(6, 1fr);
     max-width: 1111px;
@@ -452,7 +467,51 @@ footer {
     min-width: 540px;
   }
 
+  .carousel {
+    width: 100vw;
+  }
+
+  .carousel__arrow:hover {
+    cursor: pointer;
+  }
+
   .booking {
-    max-width: 1095px;
+    flex-direction: row;
+    max-width: 1111px;
+    align-self: center;
+    line-height: unset;
+    gap: 182px;
+  }
+
+  .booking__div {
+    width: 540px;
+    align-items: flex-start;
+    gap: 25px;
+  }
+
+  .booking__title {
+    font-size: 40px;
+    font-weight: 700;
+  }
+
+  .booking__content {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: start;
+    line-height: 28px;
+  }
+
+  .cta-btn {
+    width: 228px;
+    height: 56px;
+    font-size: 16px;
+  }
+
+  .cta-btn:hover {
+    cursor: pointer;
+  }
+
+  footer {
+    min-width: 1111px;
   }
 }
