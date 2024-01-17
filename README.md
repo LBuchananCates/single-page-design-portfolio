@@ -2,9 +2,9 @@
 
 [Click here to see my website live!](https://verdant-tanuki-988258.netlify.app)
 
-![desktop view](<Screen Shot 2024-01-04 at 4.44.50 PM.png>)
-![tablet view](<Screen Shot 2024-01-04 at 4.45.49 PM.png>)
-![mobile view](<Screen Shot 2024-01-04 at 4.44.35 PM.png>)
+![desktop](<Screen Shot 2024-01-04 at 4.44.50 PM.png>)
+![tablet](<Screen Shot 2024-01-04 at 4.45.49 PM.png>)
+![mobile](<Screen Shot 2024-01-04 at 4.44.35 PM.png>)
 
 ## Overview
 
@@ -39,6 +39,7 @@ In order:
 3. Logic required to restart photo slider from first photo and last photo
 
 Proud of my use of CSS grid. Was very fun to use for layout of the hero section; also learned how to use gap for easier spacing, rather than depending on margin and padding as seen in `.portfolio`.
+Also, got to work with transition property under `.carousel__container img`
 
 ```css
 .solutions {
@@ -59,6 +60,10 @@ Proud of my use of CSS grid. Was very fun to use for layout of the hero section;
   flex-direction: column;
   gap: 32px;
   text-align: center;
+}
+
+.carousel__container img {
+  transition: all 0.4s cubic-bezier(0.43, 0.45, 0.45, 0.45);
 }
 ```
 
@@ -95,7 +100,7 @@ Still need to work on javascript skills, learned a lot more about CSS grid and h
 - stackoverflow
 - css-tricks
 - w3 schools
-- Figma!!! Was very helpful with getting exact measurements for styling
+- Figma!!!
 
 ## Author
 

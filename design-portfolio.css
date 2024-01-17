@@ -247,7 +247,6 @@ main {
   top: 0;
   left: -16px;
   overflow: hidden;
-  /* scroll-snap-type: x mandatory; needed*/
 }
 
 .carousel__container img {
@@ -295,7 +294,6 @@ main {
   padding: 48px 51px;
 }
 
-/* added for desktop change in display direction */
 .booking__div {
   display: flex;
   flex-direction: column;
