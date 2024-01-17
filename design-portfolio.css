@@ -254,6 +254,7 @@ main {
   height: auto;
   width: 270px;
   border-radius: 10px;
+  transition: all 0.4s ease;
 }
 
 .carousel__arrow {
